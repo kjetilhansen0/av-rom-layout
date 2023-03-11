@@ -20,22 +20,14 @@ html {
   line-height: 1.5;
 }
 body {
-  background: var(--color-neutral-tint-95);
+  background: var(--color-neutral-tint-90);
   font-size: 1.6rem;
-  margin: 0;
+  margin: 20px;
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-iframe {
-  width: 100%;
-  height: auto;
-  border: none;
-}
-iframe[src*=mazemap] ~ * {
-  display: none;
 }
 ul {
   list-style: none;
@@ -49,7 +41,7 @@ h1 {
 }
 h2 {
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   color: var(--color-neutral-tint-25);
   margin: 0 0 15px 0;
@@ -79,227 +71,14 @@ a {
 a:hover {
   text-decoration: none;
 }
-.invisible {
-  position: absolute;
-  left: -100000px;
-}
 .test {
   outline: 5px solid red !important;
-}
-.area {
-  display: grid;
-  gap: 40px;
-  padding: 0 40px 40px 40px;
-}
-.box {
-  padding: 20px;
-  background: white;
-  box-shadow: 0 1px 4px var(--color-neutral-tint-80);
-  border-radius: 5px;
-}
-.area.header {
-  background: white;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-.back-link,
-.more-link,
-.mixin-more-link {
-  display: inline-flex;
-  text-decoration: none;
-}
-.back-link::before,
-.more-link::before,
-.mixin-more-link::before {
-  content: "";
-  flex-shrink: 0;
-  background: url("../images/arrow.svg") no-repeat center;
-  background-size: contain;
-  width: 16px;
-  margin-right: 8px;
-}
-.back-link:hover,
-.more-link:hover,
-.mixin-more-link:hover {
-  text-decoration: underline;
-}
-.back-link {
-  font-size: 1.2rem;
-  color: var(--color-neutral-tint-25);
-}
-.back-link::before {
-  transform: rotate(180deg);
-  opacity: 0.6;
-}
-.area.first {
-  background: white;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: stretch;
-}
-.area.first img {
-  object-fit: cover;
-  max-height: 350px;
-}
-.area.first iframe {
-  margin-bottom: -27px;
-}
-.area.second {
-  padding-top: 40px;
-  grid-template-columns: 1fr 1fr;
-}
-.area.fourth {
-  grid-template-columns: 1fr 1fr;
-}
-.message-log {
-  grid-row: 1/3;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  background-color: var(--color-uio-yellow);
-  padding: 0;
-}
-.message-log .inner {
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--color-neutral-tint-80);
-  min-height: 250px;
-}
-.message-log ul {
-  position: absolute;
-  margin: 20px;
-}
-.message-log li {
-  margin-bottom: 15px;
-}
-.message-log li div {
-  font-size: 1.4rem;
-  color: var(--color-neutral-tint-25);
-}
-.message-log li div strong {
-  font-weight: normal;
-}
-.message-log li div button {
-  margin-left: 5px;
-  padding: 0;
-  border: none;
-  text-decoration: underline;
-}
-.message-log li div button:hover {
-  text-decoration: none;
-}
-.message-log .functions {
-  position: relative;
-  padding: 10px 20px 12px;
-}
-.message-log .show-all {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: -20px;
-  padding: 0;
-  background-color: var(--color-uio-yellow);
-  border-color: var(--color-neutral-tint-80);
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-}
-.message-log .show-all::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--color-neutral-tint-90) url("../images/chevron.svg") no-repeat center;
-  transform: rotate(90deg);
-  border-radius: 100%;
-}
-.message-log .show-all:hover::before {
-  background-color: var(--color-neutral-tint-80);
-}
-.message-log .show-all span {
-  position: absolute;
-  left: -100000px;
-}
-.message-log.overflows .show-all {
-  display: grid;
-}
-.message-log.expanded ul {
-  position: static;
-}
-.message-log.expanded .show-all::before {
-  transform: rotate(-90deg);
-}
-.equipment-list {
-  grid-row: 1/3;
-}
-.equipment-list .tp-equipment-list {
-  column-width: 250px;
-  gap: 20px;
-}
-.equipment-list .tp-equipment-list ul {
-  padding-bottom: 15px;
-}
-.equipment-list .tp-equipment-list li {
-  font-weight: bold;
-}
-.equipment-list .tp-equipment-list li li {
-  font-weight: normal;
-}
-.zabbix a {
-  display: inline-flex;
-  text-decoration: none;
-}
-.zabbix a::before {
-  content: "";
-  flex-shrink: 0;
-  background: url("../images/arrow.svg") no-repeat center;
-  background-size: contain;
-  width: 16px;
-  margin-right: 8px;
-}
-.zabbix a:hover {
-  text-decoration: underline;
-}
-.events ul {
-  margin-bottom: 20px;
-}
-.events li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  margin-bottom: 15px;
-}
-.events li strong {
-  margin-right: 1.5rem;
-}
-.events li p {
-  display: inline;
-  margin: 0;
-}
-.events li .avrom-coursestaff {
-  font-size: 1.4rem;
-  color: var(--color-neutral-tint-25);
-  display: block;
-}
-.events a {
-  display: inline-flex;
-  text-decoration: none;
-}
-.events a::before {
-  content: "";
-  flex-shrink: 0;
-  background: url("../images/arrow.svg") no-repeat center;
-  background-size: contain;
-  width: 16px;
-  margin-right: 8px;
-}
-.events a:hover {
-  text-decoration: underline;
-}
-.second-line-support {
-  background-color: var(--color-uio-peach);
 }
 .room-layout {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  background: white;
+  padding: 20px;
 }
 .room-layout .diagram {
   position: relative;
